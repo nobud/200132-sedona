@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Седона</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="logo" href="index.html">
+        <img src="img/logo.svg" width="100" height="100" alt="City of Sedona">
+      </a>
+      <nav class="main-nav main-nav--closed">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="index.html">Главная</a></li>
+          <li class="main-nav__item   main-nav__item--active"><a>Фото и видео</a></li>
+          <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
+          <li class="main-nav__item"><a href="https://htmlacademy.ru">HTML academy</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" type="button">Открыть меню</button>
+    </header>
+    <main class="page-main">
+      <section class="main-picture">
+        <img src="img/main-picture.jpg" width="100" height="100" alt="Welcome to the Gorgeous Sedona because the Grand Canyon sucks">
+      </section>
+      <section class="intro  intro--photo">
+        <h1 class="intro__title">
+          Фото и видео
+        </h1>
+        <p class="intro__text">
+          Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+        </p>
+      </section>
+      <section class="photo-list">
+        <article class="photo">
+          <a class="photo__image" href="#">
+            <img src="img/expanse.jpg" width="100" height="100" alt="Неродные просторы">
+          </a>
+          <div class="photo__info">
+            <h2 class="photo__title">Неродные просторы</h2>
+            <p class="photo__author">Автор фото: Борис</p>
+            <div class="photo__answer  review-quiz">
+              <span class="review-quiz__like">Нравится</span>
+              <span class="review-quiz__likes-count">1350</span>
+            </div>
+          </div>
+        </article>
+        <article class="photo">
+          <a class="photo__image" href="#">
+            <img src="img/vegetation.jpg" width="100" height="100" alt="Местная растительность">
+          </a>
+          <div class="photo__info">
+            <h2 class="photo__title">Местная растительность</h2>
+            <p class="photo__author">Автор фото: Сергей</p>
+            <div class="photo__answer  review-quiz">
+              <span class="review-quiz__like">Нравится</span>
+              <span class="review-quiz__likes-count">143</span>
+            </div>
+          </div>
+        </article>
+        <article class="photo">
+          <a class="photo__image" href="#">
+            <img src="img/road.jpg" width="100" height="100" alt="Дорога на Север">
+          </a>
+          <div class="photo__info">
+            <h2 class="photo__title">Дорога на Север</h2>
+            <p class="photo__author">Автор фото: Петр</p>
+            <div class="photo__answer  review-quiz">
+              <span class="review-quiz__like">Нравится</span>
+              <span class="review-quiz__likes-count">96</span>
+            </div>
+          </div>
+        </article>
+        <article class="photo">
+          <a class="photo__image" href="#">
+            <img src="img/bridge.jpg" width="100" height="100" alt="Мост дьявола">
+          </a>
+          <div class="photo__info">
+            <h2 class="photo__title">Мост дьявола</h2>
+            <p class="photo__author">Автор фото: Антон</p>
+            <div class="photo__answer  review-quiz">
+              <span class="review-quiz__like">Нравится</span>
+              <span class="review-quiz__likes-count">254</span>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="video-content">
+        <p class="video-content__title">Все еще сомневаетесь?</p>
+        <p class="video-content__text">Смотрите видеопрезентацию и скорее за билетами,
+          пока они не подорожали в очередной раз!
+        </p>
+        <div class="player">
+          <video class="player__video"></video>
+          <div class="player__wrapper">
+            <div class="player__progressbar  progressbar">
+              <div class="progressbar__scale">
+                <div class="progressbar__bar"></div>
+              </div>
+              <div class="progressbar__toggle"></div>
+            </div>
+            <div class="player-controls">
+              <button class="player-controls__restart" type="button"></button>
+              <a class="player-controls__license" href="https://creativecommons.org/licenses/by/4.0/legalcode">CC</a>
+              <button class="player-controls__fullscreen" type="button"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <section class="page-footer__hashtag  hashtag">
+        #visitSedona
+      </section>
+      <section class="page-footer__social-links  social-links">
+        <a class="social-links__btn  social-links__btn--tw" href="#">Мы в Твиттере</a>
+        <a class="social-links__btn  social-links__btn--f" href="#">Мы в Фейсбуке</a>
+        <a class="social-links__btn  social-links__btn--y" href="#">Мы в Youtube</a>
+      </section>
+      <section class="page-footer__copyright  copyright">
+        Разработано
+        <a class="copyright-link" href="https://htmlacademy.ru">HTML academy</a>
+      </section>
+    </footer>
+  </body>
+</html>
