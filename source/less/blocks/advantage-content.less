@@ -1,0 +1,38 @@
+.advantage-content {
+  padding: 40px 10px;
+
+  .set-background-color(@blue-color);
+
+  &--background-grey {
+    padding: 28px 10px;
+
+    .set-background-color(@grey-color);
+    .advantage-content__title {
+      .set-title-color();
+    }
+  }
+
+  &--border-bottom {
+    border-bottom: 1px solid @border-advantage-color;
+  }
+}
+
+.advantage-content__title {
+  margin: 0;
+  margin-bottom: 10px;
+
+  .set-title();
+  text-align: center;
+}
+
+.advantage-content__number {
+  margin-bottom: 16px;
+
+  display: block;
+  text-align: center;
+}
+
+.advantage-content__text {
+  margin: 0;
+  text-align: center;
+}
