@@ -53,7 +53,7 @@ if (wrapReview) {
       return false;
     }
     return true;
-  }
+  };
 
   var onSubmitFormReview = function(evt) {
     if (!validityReview()) {
@@ -81,7 +81,7 @@ if (wrapReview) {
         xhr.send(formData);
       }
     }
-  }
+  };
 
   var closeMessage = function() {
     if (messageInfo.classList.contains('message-info--opened')) {
@@ -91,13 +91,13 @@ if (wrapReview) {
     if (messageErr.classList.contains('message-info--opened')) {
       messageErr.classList.remove('message-info--opened');
     }
-  }
+  };
 
   var deleteListenersMessage = function() {
     btnCloseMessageInfo.removeEventListener('click', onCloseMessage);
     btnCloseMessageErr.removeEventListener('click', onCloseMessage);
     document.removeEventListener('keydown', onKeyDownMessage);
-  }
+  };
 
   var setListenersMessage = function() {
     btnCloseMessageInfo.addEventListener('click', onCloseMessage);
@@ -105,7 +105,7 @@ if (wrapReview) {
     document.addEventListener('keydown', onKeyDownMessage);
 
 
-  }
+  };
 
   var onKeyDownMessage = function(evt) {
     if (evt.keyCode === ESC_CODE) {
@@ -113,13 +113,13 @@ if (wrapReview) {
 
       closeMessage();
     }
-  }
+  };
 
   var onCloseMessage = function(evt) {
     deleteListenersMessage();
 
     closeMessage();
-  }
+  };
 
   firstName.required = true;
   lastName.required = true;
