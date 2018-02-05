@@ -1,0 +1,37 @@
+.set-color() when (@background-color = @blue-color) {
+  color: #ffffff;
+}
+
+.set-color() when (@background-color = @grey-color) {
+  color: @base-font-color;
+}
+
+.set-background-color(@background-color) {
+  background-color: @background-color;
+  .set-color();
+}
+
+.set-title() {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.set-title-color() {
+  color: @title-color;
+}
+
+.set-input-form() {
+  padding: 16px 20px;
+  border: none;
+  background-color: @form-input-color;
+  color: #000000;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.set-input-form-placeholder() {
+  color: #000000;
+  opacity: 1;
+}

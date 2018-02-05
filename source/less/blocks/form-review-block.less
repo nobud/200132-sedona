@@ -1,0 +1,39 @@
+.form-review-block {
+  margin: 0;
+  padding: 20px;
+  padding-bottom: 6px;
+
+  border: none;
+  border-top: 1px solid @border-block-color;
+}
+
+.form-review-block__title {
+  margin: 0;
+  margin-bottom: 22px;
+  .set-title();
+  .set-title-color();
+  text-align: center;
+}
+
+.form-review-block__textarea {
+  min-height: 160px;
+  margin-bottom: 46px;
+
+  .set-input-form();
+
+  &::-webkit-input-placeholder {
+    .set-input-form-placeholder();
+  }
+
+  &:-moz-placeholder {
+    .set-input-form-placeholder();
+  }
+
+  &::-moz-placeholder {
+    .set-input-form-placeholder();
+  }
+
+  &:-ms-input-placeholder {
+    .set-input-form-placeholder();
+  }
+}

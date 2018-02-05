@@ -1,0 +1,65 @@
+.form-review-field {
+  margin-bottom: 12px;
+
+  span {
+    display: block;
+    padding-bottom: 8px;
+    text-transform: none;
+    color: @error-color;
+  }
+
+  &--check .form-review-field__input {
+    box-sizing: border-box;
+    width: 70px;
+  }
+
+  &--check .form-review-field__label {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: none;
+    color: #000000;
+  }
+}
+
+.form-review-field__label {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding-right: 7px;
+  padding-bottom: 10px;
+}
+
+.form-review-field__input {
+  box-sizing: border-box;
+  width: 194px;
+  margin-bottom: 8px;
+
+  .set-input-form();
+
+  &--name {
+    box-sizing: border-box;
+    width: 230px;
+  }
+
+  &--contact {
+    box-sizing: border-box;
+    width: 280px;
+  }
+
+  &::-webkit-input-placeholder {
+    .set-input-form-placeholder();
+  }
+
+  &:-moz-placeholder {
+    .set-input-form-placeholder();
+  }
+
+  &::-moz-placeholder {
+    .set-input-form-placeholder();
+  }
+
+  &:-ms-input-placeholder {
+    .set-input-form-placeholder();
+  }
+}

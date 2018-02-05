@@ -3,25 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="site">
     <header class="page-header">
       <a class="logo" href="index.html">
         <img src="img/logo.svg" width="100" height="100" alt="City of Sedona">
       </a>
       <nav class="main-nav main-nav--closed">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="index.html">Главная</a></li>
-          <li class="main-nav__item   main-nav__item--active"><a>Фото и видео</a></li>
-          <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
-          <li class="main-nav__item"><a href="https://htmlacademy.ru">HTML academy</a></li>
+          <li class="main-nav__item  main-nav__item--bottom-border"><a href="index.html">Главная</a></li>
+          <li class="main-nav__item  main-nav__item--bottom-border  main-nav__item--top-border  main-nav__item--active"><a>Фото и видео</a></li>
+          <li class="main-nav__item  main-nav__item--bottom-border  main-nav__item--top-border"><a href="form.html">Форма отзыва</a></li>
+          <li class="main-nav__item  main-nav__item--top-border"><a href="https://htmlacademy.ru">HTML academy</a></li>
         </ul>
       </nav>
       <button class="menu-toggle" type="button">Открыть меню</button>
     </header>
     <main class="page-main">
       <section class="main-picture">
-        <img src="img/main-picture.jpg" width="100" height="100" alt="Welcome to the Gorgeous Sedona because the Grand Canyon sucks">
+
       </section>
       <section class="intro  intro--photo">
         <h1 class="intro__title">
@@ -32,14 +33,14 @@
         </p>
       </section>
       <section class="photo-list">
-        <article class="photo">
+        <article class="photo  photo--border-top">
           <a class="photo__image" href="#">
-            <img src="img/expanse.jpg" width="100" height="100" alt="Неродные просторы">
+            <img src="img/photo-1-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
           </a>
           <div class="photo__info">
             <h2 class="photo__title">Неродные просторы</h2>
             <p class="photo__author">Автор фото: Борис</p>
-            <div class="photo__answer  review-quiz">
+            <div class="photo__answer review-quiz">
               <span class="review-quiz__like">Нравится</span>
               <span class="review-quiz__likes-count">1350</span>
             </div>
@@ -47,7 +48,7 @@
         </article>
         <article class="photo">
           <a class="photo__image" href="#">
-            <img src="img/vegetation.jpg" width="100" height="100" alt="Местная растительность">
+            <img src="img/photo-2-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
           </a>
           <div class="photo__info">
             <h2 class="photo__title">Местная растительность</h2>
@@ -60,7 +61,7 @@
         </article>
         <article class="photo">
           <a class="photo__image" href="#">
-            <img src="img/road.jpg" width="100" height="100" alt="Дорога на Север">
+            <img src="img/photo-3-mobile@1x.jpg" width="280" height="280" alt="Дорога на Север">
           </a>
           <div class="photo__info">
             <h2 class="photo__title">Дорога на Север</h2>
@@ -73,7 +74,7 @@
         </article>
         <article class="photo">
           <a class="photo__image" href="#">
-            <img src="img/bridge.jpg" width="100" height="100" alt="Мост дьявола">
+            <img src="img/photo-4-mobile@1x.jpg" width="280" height="280" alt="Мост дьявола">
           </a>
           <div class="photo__info">
             <h2 class="photo__title">Мост дьявола</h2>
@@ -101,7 +102,7 @@
             </div>
             <div class="player-controls">
               <button class="player-controls__restart" type="button"></button>
-              <a class="player-controls__license" href="https://creativecommons.org/licenses/by/4.0/legalcode">CC</a>
+              <button class="player-controls__subtitles">CC</button>
               <button class="player-controls__fullscreen" type="button"></button>
             </div>
           </div>
@@ -109,15 +110,15 @@
       </section>
     </main>
     <footer class="page-footer">
-      <section class="page-footer__hashtag  hashtag">
+      <section class="hashtag">
         #visitSedona
       </section>
-      <section class="page-footer__social-links  social-links">
-        <a class="social-links__btn  social-links__btn--tw" href="#">Мы в Твиттере</a>
-        <a class="social-links__btn  social-links__btn--f" href="#">Мы в Фейсбуке</a>
-        <a class="social-links__btn  social-links__btn--y" href="#">Мы в Youtube</a>
+      <section class="social-links">
+        <a class="button  social-links__btn  social-links__btn--tw" href="#">Мы в Твиттере</a>
+        <a class="button  social-links__btn  social-links__btn--f" href="#">Мы в Фейсбуке</a>
+        <a class="button  social-links__btn  social-links__btn--y" href="#">Мы в Youtube</a>
       </section>
-      <section class="page-footer__copyright  copyright">
+      <section class="copyright">
         Разработано
         <a class="copyright-link" href="https://htmlacademy.ru">HTML academy</a>
       </section>
