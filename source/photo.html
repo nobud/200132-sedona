@@ -24,7 +24,7 @@
       </header>
       <main class="page-main">
         <section class="main-picture">
-
+          <img src="img/text-sedona.svg" width="229" height="39" alt="Sedona">
         </section>
         <section class="intro  intro--photo">
           <h1 class="intro__title">
@@ -45,7 +45,7 @@
                 <p class="photo__author">Автор фото: Борис</p>
               </div>
               <div class="photo__answer review-quiz">
-                <span class="review-quiz__like">Нравится</span>
+                <div class="review-quiz__like"><span class="visually-hidden">Нравится</span></div>
                 <span class="review-quiz__likes-count">1350</span>
               </div>
             </div>
@@ -60,7 +60,7 @@
                 <p class="photo__author">Автор фото: Сергей</p>
               </div>
               <div class="photo__answer  review-quiz">
-                <span class="review-quiz__like">Нравится</span>
+                <div class="review-quiz__like"><span class="visually-hidden"Нравится</span></div>
                 <span class="review-quiz__likes-count">143</span>
               </div>
             </div>
@@ -75,7 +75,7 @@
                 <p class="photo__author">Автор фото: Петр</p>
               </div>
               <div class="photo__answer  review-quiz">
-                <span class="review-quiz__like">Нравится</span>
+                <div class="review-quiz__like"><span class="visually-hidden"Нравится</span></div>
                 <span class="review-quiz__likes-count">96</span>
               </div>
             </div>
@@ -90,7 +90,7 @@
                 <p class="photo__author">Автор фото: Антон</p>
               </div>
               <div class="photo__answer  review-quiz">
-                <span class="review-quiz__like">Нравится</span>
+                <div class="review-quiz__like"><span class="visually-hidden"Нравится</span></div>
                 <span class="review-quiz__likes-count">254</span>
               </div>
             </div>
@@ -106,15 +106,12 @@
             <div class="player__wrapper">
               <div class="player__progressbar  progressbar">
                 <div class="progressbar__scale">
-                  <div class="progressbar__bar"></div>
+                  <div class="progressbar__toggle"></div>
                 </div>
-                <div class="progressbar__toggle"></div>
               </div>
-              <div class="player-controls">
-                <button class="player-controls__restart" type="button"></button>
-                <button class="player-controls__subtitles">CC</button>
-                <button class="player-controls__fullscreen" type="button"></button>
-              </div>
+              <button class="player__control  player__control--restart" type="button">restart</button>
+              <button class="player__control  player__control--subtitles" type="button">CC</button>
+              <button class="player__control  player__control--fullscreen" type="button">fullscreen</button>
             </div>
           </div>
         </section>
@@ -124,13 +121,13 @@
           #visitSedona
         </section>
         <section class="page-footer__column  social-links">
-          <a class="button  social-links__btn  social-links__btn--tw" href="#">Мы в Твиттере</a>
-          <a class="button  social-links__btn  social-links__btn--f" href="#">Мы в Фейсбуке</a>
-          <a class="button  social-links__btn  social-links__btn--y" href="#">Мы в Youtube</a>
+          <a class="button  social-links__btn  social-links__btn--tw" href="#"><span class="visually-hidden">Мы в Твиттере</span></a>
+          <a class="button  social-links__btn  social-links__btn--f" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+          <a class="button  social-links__btn  social-links__btn--y" href="#"><span class="visually-hidden">Мы в Youtube</span></a>
         </section>
         <section class="page-footer__column  copyright">
           Разработано
-          <a class="copyright-link" href="https://htmlacademy.ru">HTML academy</a>
+          <a class="copyright-link" href="https://htmlacademy.ru"><span class="visually-hidden"> htmlacademy</span></a>
         </section>
       </footer>
     </div>

@@ -1,13 +1,15 @@
 .form-review {
-  width: 100%;
   box-sizing: border-box;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 36px;
+  width: 100%;
 }
 
 .form-review__button {
+  padding-top: 15px;
+  padding-bottom: 15px;
   width: 100%;
-  margin-bottom: 40px;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -18,25 +20,28 @@
 
 @media (min-width: @tablet-width) {
   .form-review {
-    padding: 0;
     .container-fluid();
+    padding: 0;
+    padding-bottom: 60px;
 
     form {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 
   .form-review__button {
     width: 50%;
-    margin-bottom: 60px;
+    margin-bottom: 0;
+    padding-top: 16px;
+    padding-bottom: 15px;
   }
 
   .form-review__comment {
     box-sizing: border-box;
-    padding: 17px;
+    padding-left: 20px;
     padding-right: 0;
-    margin-bottom: 60px;
     width: 50%;
     text-align: right;
     align-self: center;
@@ -45,6 +50,7 @@
 
 @media (min-width: @desktop-width) {
   .form-review {
+    padding-bottom: 66px;
     width: 80%;
   }
 }

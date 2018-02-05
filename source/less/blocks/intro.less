@@ -1,26 +1,43 @@
 .intro {
   box-sizing: border-box;
   width: 100%;
-  padding: 42px 20px;
+  padding: 38px 20px;
+  padding-bottom: 6px;
 
   font-size: 14px;
   line-height: 26px;
 
   &--form {
     padding-bottom: 18px;
-    padding-top: 36px;
-    padding-left: 20px;
+    padding-top: 38px;
+
+    .intro__title {
+      margin-bottom: 26px;
+    }
+
+    .intro__text {
+      line-height: 24px;
+    }
   }
 
   &--photo {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-bottom: 28px;
+
+    .intro__title {
+      margin-bottom: 26px;
+    }
+
+    .intro__text {
+      width: 98%;
+      line-height: 24px;
+    }
   }
 }
 
 .intro__title {
   margin: 0 auto;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
+  width: 94%;
 
   .set-title();
   color: @title-color;
@@ -34,20 +51,13 @@
 
 @media (min-width: @tablet-width) {
   .intro {
-    padding: 52px 120px;
-
-    .intro__title {
-      font-size: 21px;
-      line-height: 26px;
-    }
+    .container-fluid();
+    padding: 52px 0;
+    padding-top: 48px;
 
     &--form,
     &--photo {
-      padding-top: 72px;
-
-      .intro__text {
-        width: 84%;
-      }
+      padding-top: 74px;
 
       .intro__title {
         font-size: 30px;
@@ -55,19 +65,48 @@
     }
 
     &--photo {
-      padding-top: 75px;
-      padding-bottom: 72px;
+      padding-bottom: 70px;
+
+      .intro__title {
+        margin-bottom: 30px;
+      }
+
+      .intro__text {
+        width: 68%;
+      }
     }
+
+    &--form {
+      padding-bottom: 74px;
+
+      .intro__title {
+        margin-bottom: 30px;
+      }
+
+      .intro__text {
+        width: 70%;
+      }
+    }
+  }
+
+  .intro__title {
+    font-size: 21px;
+    line-height: 26px;
+    width: 70%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .intro {
     display: block;
-    padding: 52px 20px;
+    padding: 52px 0;
+    padding-top: 48px;
+    width: 100%;
+
 
     &--form {
-      padding-top: 112px;
+      padding-top: 110px;
+      padding-bottom: 60px;
 
       .intro__text {
         width: 40%;
@@ -75,17 +114,17 @@
     }
 
     &--photo {
-      padding-top: 114px;
+      padding-top: 110px;
       padding-bottom: 72px;
-    }
 
-    .intro__text {
-      width: 38%;
+      .intro__text {
+        width: 36%;
+      }
     }
   }
 
   .intro__title {
-    width: 50%;
+    width: 40%;
   }
 
   .intro__text {
