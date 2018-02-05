@@ -1,11 +1,39 @@
 .review-quiz {
+  display: flex;
   font-size: 14px;
   line-height: 24px;
+}
+
+.review-quiz__like {
+  position: relative;
+  width: 37px;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background: url("../../img/icon-like.svg") no-repeat;
+  }
 }
 
 .review-quiz__likes-count {
   color: @review-font-color;
   font-weight: 700;
+}
+
+@media (min-width: @tablet-width) {
+  .review-quiz {
+    justify-content: flex-end;
+  }
+
+  .review-quiz__like {
+    width: 32px;
+  }
 }
 
 @media (min-width: @desktop-width) {

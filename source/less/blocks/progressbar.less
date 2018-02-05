@@ -1,0 +1,46 @@
+.progressbar {
+  position: relative;
+  height: 45px;
+  max-width: 100%;
+  padding: 0 22px;
+  overflow: hidden;
+}
+
+.progressbar__scale {
+  margin-top: 22px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.progressbar__toggle {
+  position: absolute;
+  top: 19px;
+  left: 20.4%;
+  width: 9px;
+  height: 9px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .progressbar {
+    padding: 0 22px;
+  }
+
+  .progressbar__toggle {
+    left: 31%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .progressbar {
+    padding-left: 25px;
+    padding-right: 35px;
+  }
+
+  .progressbar__toggle {
+    left: 23%;
+  }
+}

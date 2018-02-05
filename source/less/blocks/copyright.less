@@ -1,20 +1,21 @@
 .copyright {
-  padding-top: 34px;
-  padding-bottom: 30px;
-
   text-align: center;
 }
 
 @media (min-width: @tablet-width) {
   .copyright {
-    padding: 10px 10px;
+    margin: 0;
+    padding: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .copyright {
-    display: flex;
-    justify-content: flex-end;
     padding-right: 45px;
+    text-align: right;
+
+    &--form {
+      padding-right: 10%;
+    }
   }
 }

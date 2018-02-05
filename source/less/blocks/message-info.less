@@ -1,11 +1,21 @@
 .message-info {
+  display: none;
   box-sizing: border-box;
   padding-top: 18px;
   width: 100%;
 
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
   &--err {
     .message-info__btn-close {
-      width: 56%;
+      width: 64.2%;
       margin: 0 auto;
     }
 
@@ -13,12 +23,21 @@
       padding-bottom: 36px;
       background-color: @base-background-color;
     }
+
+    .message-info__text {
+      margin-bottom: 4px;
+    }
+  }
+
+  &--opened {
+    display: block;
+    position: fixed;
   }
 }
 
 .message-info__title {
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   text-align: center;
   .set-title();
   color: @title-color;
@@ -27,7 +46,7 @@
 .message-info__text {
   box-sizing: border-box;
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 36px;
   padding-left: 26px;
   padding-right: 26px;
   width: 90%;
@@ -37,12 +56,15 @@
 }
 
 .message-info__wrapper {
+  box-sizing: border-box;
   padding: 20px;
   background-color: #f2f2f2;
 }
 
 .message-info__btn-close {
   box-sizing: border-box;
+  padding-top: 14px;
+  padding-bottom: 16px;
   display: block;
   width: 100%;
 
@@ -52,13 +74,19 @@
 @media (min-width: @tablet-width) {
   .message-info {
     padding-top: 56px;
-    width: 84.3%;
+    width: 83%;
 
     &--err {
       width: 52%;
 
       .message-info__text {
         width: 90%;
+        margin-bottom: 0;
+      }
+
+      .message-info__wrapper {
+        padding-top: 33px;
+        padding-bottom: 48px;
       }
 
       .message-info__btn-close {
@@ -69,6 +97,7 @@
 
   .message-info__title {
     box-sizing: border-box;
+    margin-bottom: 24px;
     width: 60%;
     font-size: 30px;
     line-height: 40px;
@@ -76,11 +105,18 @@
 
   .message-info__text {
     box-sizing: border-box;
+    margin-bottom: 34px;
     width: 75%;
   }
 
   .message-info__btn-close {
     margin: 0 auto;
-    width: 71%;
+    padding-top: 15px;
+    padding-bottom: 17px;
+    width: 72%;
+  }
+
+  .message-info__wrapper {
+    padding: 44px 0;
   }
 }
