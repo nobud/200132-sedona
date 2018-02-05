@@ -1,6 +1,12 @@
 .advantage-feature-list {
+  padding: 20px;
   padding-top: 26px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .advantage-feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+  }
 }

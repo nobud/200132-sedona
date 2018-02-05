@@ -1,5 +1,11 @@
 .advantages-wrapper {
   padding: 0 20px;
+  background-color: @advantage-other-color;
+}
 
-  .set-background-color(@grey-color);
+@media (min-width: @tablet-width) {
+  .advantages-wrapper {
+    display: flex;
+    padding: 0;
+  }
 }

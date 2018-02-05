@@ -1,20 +1,47 @@
 @base-background-color: #ffffff;
+@desktop-background-color: #f1f1f1;
+
 @base-font-color: #333333;
-@blue-color: #81b3d2;
-@grey-color: #eeeeee;
-@border-advantage-color: #d6d6d6;
-@border-block-color: #e5e5e5;
 @main-picture-color: #926869;
+@blue-style-color: #81b3d2;
+@blue-style-color-hover: #669ec0;
+@blue-style-color-down: #5496bd;
+
+@advantage-main-color: @blue-style-color;
+@advantage-main-font-color: #ffffff;
+@advantage-other-color: #eeeeee;
+@border-advantage-color: #d6d6d6;
+
+@border-block-color: #e5e5e5;
 @title-color: #000000;
 @form-input-color: #f2f2f2;
+@review-font-color: #000000;
 @error-color: #ff5c5c;
 
-@menu-color: @blue-color;
-@button-color: @blue-color;
+@menu-color: @blue-style-color;
+@menu-color-hover: @blue-style-color-hover;
+@menu-color-down: @blue-style-color-down;
+@menu-active-font-color: rgb(118, 99, 87);
+@menu-active-font-color-down: rgba(118, 99, 87, 0.3);
+@menu-active-font-color-hover: #604e43;
+
+@button-color: @blue-style-color;
+@button-disabled-color: #e5e5e5;
+@button-color-hover: @blue-style-color-hover;
+@button-color-down: @blue-style-color-down;
 
 @base-font-size: 14px;
 @base-line-size: 21px;
 
-@mobile-size: 320px;
+@mobile-width: 320px;
+@mobile-paddings: 40px;
+@mobile-content-width: @mobile-width - @mobile-paddings;
 
-@header-height: 56px;
+@tablet-width: 768px;
+@tablet-content-width: @tablet-width;
+
+@mobile-width-only: 767px;
+
+@desktop-width: 1280px;
+@desktop-paddings: 80px;
+@desktop-content-width: @desktop-width - @desktop-paddings;

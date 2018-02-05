@@ -1,0 +1,30 @@
+body {
+  min-width: @mobile-width;
+  font-size: @base-font-size;
+  line-height: @base-line-size;
+  font-weight: 400;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: @base-font-color;
+  background-color: @base-background-color;
+  text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    background-color: @desktop-background-color;
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

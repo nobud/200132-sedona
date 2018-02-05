@@ -1,5 +1,6 @@
 .main-nav {
-  .set-background-color(@menu-color);
+  background-color: @menu-color;
+  color: #ffffff;
 }
 
 .main-nav__list {
@@ -9,24 +10,98 @@
 }
 
 .main-nav__item {
-  padding: 12px 10px;
   font-size: 18px;
   line-height: 40px;
   font-weight: 700;
   text-align: center;
+  border-bottom: 1px solid #678fa8;
+  border-top: 1px solid #9ac2db;
 
-  &--bottom-border {
-    border-bottom: 1px solid #678fa8;
+  &:first-of-type {
+    border-top: none;
   }
 
-  &--top-border {
-    border-top: 1px solid #9ac2db;
+  &:last-of-type {
+    border-bottom: none;
   }
 
   a {
+    display: block;
+    padding: 8px 45px;
     font: inherit;
     color: inherit;
     text-decoration: none;
     outline: none;
+
+    &[href]:hover {
+      background-color: @menu-color-hover;
+      color: #ffffff;
+    }
+
+    &[href]:active {
+      background-color: @menu-color-down;
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    display: block;
+    background-color: @base-background-color;
+    color: #000000;
+  }
+
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main-nav__item {
+    box-sizing: border-box;
+    width: 20%;
+    border: none;
+    font-size: 14px;
+    line-height: 26px;
+
+    &:nth-child(2) {
+      margin-right: 20%;
+    }
+
+    &:nth-child(-n+2) {
+      align-self: flex-start;
+    }
+
+    &:nth-child(n+2) {
+      align-self: flex-end;
+    }
+
+    a {
+      padding: 15px 10px;
+
+      &[href]:hover {
+        background-color: @base-background-color;
+        color: @blue-style-color;
+      }
+
+      &[href]:active {
+        background-color: @base-background-color;
+        color: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    &--active {
+      a {
+        color: @menu-active-font-color;
+
+        &:hover {
+          color: @menu-active-font-color-hover;
+        }
+
+        &:active {
+          color: @menu-active-font-color-down;
+        }
+      }
+    }
   }
 }

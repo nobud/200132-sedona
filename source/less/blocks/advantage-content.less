@@ -1,38 +1,98 @@
 .advantage-content {
-  padding: 40px 10px;
+  padding: 40px 20px;
+  background-color: @advantage-main-color;
+  color: @advantage-main-font-color;
 
-  .set-background-color(@blue-color);
-
-  &--background-grey {
+  &--background-other {
     padding: 28px 10px;
-    .set-background-color(@grey-color);
+    background-color: @advantage-other-color;
+    color: @base-font-color;
+    border-bottom: 1px solid @border-advantage-color;
 
     .advantage-content__title {
-      .set-title-color();
+      color: @title-color;
     }
   }
 
-  &--border-bottom {
-    border-bottom: 1px solid @border-advantage-color;
+  &--background-other:last-child {
+    border-bottom: none;
   }
 }
 
 .advantage-content__title {
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 10px;
-
-  .set-title();
   text-align: center;
+  .set-title();
 }
 
 .advantage-content__number {
   margin-bottom: 16px;
-
   display: block;
   text-align: center;
 }
 
 .advantage-content__text {
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .advantage-content {
+    padding: 46px 20px;
+    width: 33.4%;
+
+    &--background-other {
+      border-bottom: none;
+    }
+
+    &--background-other .advantage-content__text {
+      width: 73%;
+    }
+
+    &--background-other:first-child .advantage-content__text {
+      width: 80%;
+      hyphens: auto;
+    }
+
+    &--background-other .advantage-content__title {
+      width: 45%;
+    }
+  }
+
+  .advantage-content__title {
+    width: 60%;
+  }
+
+  .advantage-content__text {
+    width: 70%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantage-content {
+    padding: 56px 20px;
+    width: 25%;
+
+    &--background-other {
+      width: 33.33%;
+    }
+
+    &--background-other .advantage-content__text {
+      width: 73%;
+    }
+
+    &--background-other:first-child .advantage-content__text {
+      width: 80%;
+      hyphens: auto;
+    }
+
+    &--background-other .advantage-content__title {
+      width: 45%;
+    }
+  }
+
+  .advantage-content__text {
+    width: 95%;
+  }
 }

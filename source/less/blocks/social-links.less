@@ -1,6 +1,7 @@
 .social-links {
   padding: 10px 20px;
   text-align: center;
+  font-size: 0;
 }
 
 .social-links__btn {
@@ -12,4 +13,10 @@
   font-size: @base-font-size;
   line-height: @base-line-size;
   font-weight: 400;
+}
+
+@media (min-width: @tablet-width) {
+  .social-links {
+    padding: 36px 20px;
+  }
 }

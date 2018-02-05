@@ -1,3 +1,50 @@
+.form-review {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .form-review__button {
   width: 100%;
+  margin-bottom: 40px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .form-review__comment {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form-review {
+    padding: 0;
+    .container-fluid();
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .form-review__button {
+    width: 50%;
+    margin-bottom: 60px;
+  }
+
+  .form-review__comment {
+    box-sizing: border-box;
+    padding: 17px;
+    padding-right: 0;
+    margin-bottom: 60px;
+    width: 50%;
+    text-align: right;
+    align-self: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-review {
+    width: 80%;
+  }
 }
