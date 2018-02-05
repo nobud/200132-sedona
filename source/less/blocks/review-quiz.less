@@ -4,6 +4,12 @@
 }
 
 .review-quiz__likes-count {
-  color: #000000;
+  color: @review-font-color;
   font-weight: 700;
+}
+
+@media (min-width: @desktop-width) {
+  .review-quiz__likes-count {
+    color: #ffffff;
+  }
 }

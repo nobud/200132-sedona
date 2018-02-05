@@ -2,17 +2,18 @@
   padding: 22px 20px;
   border-bottom: 1px solid @border-block-color;
 
-  &--border-top {
+  &:first-child {
     border-top: 1px solid @border-block-color;
   }
 }
 
 .photo__image {
   display: block;
-  margin-bottom: 20px;
+  line-height: 0;
 }
 
 .photo__info {
+  padding-top: 20px;
   font-size: 14px;
   line-height: 24px;
 }
@@ -23,11 +24,90 @@
   font-size: 14px;
   line-height: 24px;
   font-weight: 700;
-  .set-title-color();
+  color: @title-color;
 }
 
 .photo__author {
   margin: 0;
   margin-bottom: 6px;
   text-transform: none;
+}
+
+.review-quiz__like {
+  text-transform: capitalize;
+}
+
+@media (min-width: @tablet-width) {
+  .photo {
+    box-sizing: border-box;
+    padding: 0;
+    width: 50%;
+    border: none;
+    background-color: #f2f2f2;
+
+    &:nth-child(2n+1) {
+      background-color: #eaeaea;
+    }
+
+    &:first-child {
+      width: 100%;
+      border: none;
+      background-color: #f2f2f2;
+
+      .photo__image {
+        height: 400px;
+      }
+    }
+  }
+
+  .photo__image {
+    height: 267px;
+  }
+
+  .photo__info {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 0;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .photo__title-group {
+    width: 67%;
+  }
+
+  .photo__title {
+    padding-top: 16px;
+  }
+
+  .photo__author {
+    margin-bottom: 18px;
+    text-align: left;
+  }
+
+  .photo__answer {
+    width: 33%;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo {
+    position: relative;
+    width: 33.33%;
+  }
+
+  .photo__info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .photo__title {
+    color: #ffffff;
+  }
 }
