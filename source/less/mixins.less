@@ -1,29 +1,15 @@
-.container() {
-  width: @mobile-content-width;
-  margin: 0 auto;
-
-  @media (min-width: @tablet-width) {
-    width: @tablet-content-width;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: @desktop-content-width;
-  }
-}
-
 .container-fluid() {
   width: auto;
+  min-width: @mobile-width;
 
   @media (min-width: @tablet-width) {
-    width: 84.4%;        /* 640px / 768px */
-    max-width: 1000px;
     margin: 0 auto;
+    width: 84.4%;        /* 640px / 768px */
   }
 
   @media (min-width: @desktop-width) {
-    width: 93.75%;        /* 1200px / 1280px */
-    max-width: 1400px;
     margin: 0 auto;
+    width: @desktop-width;
   }
 }
 
@@ -51,6 +37,7 @@
   border: 4px solid @form-input-color;
   background-color: @form-input-color;
   color: #000000;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;

@@ -75,6 +75,7 @@
   .message-info {
     padding-top: 56px;
     width: 83%;
+    margin: 0 auto;
 
     &--err {
       width: 52%;
@@ -118,5 +119,23 @@
 
   .message-info__wrapper {
     padding: 44px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .message-info {
+    width: 53.3%;
+
+    &--err {
+      width: 33.3%;
+
+      .message-info__title {
+        width: 60%;
+      }
+
+      .message-info__text {
+        width: 80%;
+      }
+    }
   }
 }
