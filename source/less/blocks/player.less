@@ -9,6 +9,10 @@
   background: #c2ab9e url("../../img/video-mobile@1x.jpg") no-repeat;
   background-size: cover;
   z-index: 10;
+
+  @media @retina {
+    background-image: url("../../img/video-mobile@2x.jpg");
+  }
 }
 
 .player__wrapper {
@@ -26,14 +30,44 @@
 .player__control {
   box-sizing: border-box;
   padding: 0;
-  border: none;
-  outline: 1px solid red;
+  padding-top: 5px;
   height: 30px;
   width: 25%;
+  border: none;
+  outline: none;
+  background-color: transparent;
   align-self: stretch;
 
+
   &--restart {
-    width: 50%;
+    margin-right: 25%;
+    padding-left: 25px;
+    text-align: left;
+  }
+
+  &--subtitles {
+    text-align: right;
+    padding-right: 4px;
+  }
+
+  &--fullscreen {
+    padding-left: 2px;
+  }
+
+  svg {
+    fill: #5c6870;
+  }
+
+  &:hover {
+    svg {
+      fill: #333333;
+    }
+  }
+
+  &:active {
+    svg {
+      fill: rgba(51, 51, 51, 0.3);
+    }
   }
 }
 
@@ -46,6 +80,7 @@
 @media (min-width: @tablet-width) {
   .player__video {
     height: 500px;
+    background-image: url("../../img/video-tablet@1x.jpg");
   }
 
   .player__wrapper {
@@ -53,19 +88,36 @@
     align-items: center;
     margin: 0;
     bottom: 0;
-    height: 92px;
+    height: 93px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
   }
 
   .player__control {
+    margin: 0;
+    padding: 0;
     align-self: center;
-    background-color: transparent;
     width: 11.1%;
     color: #ffffff;
 
     &--restart {
       order: -1;
+      text-align: center;
+      padding-left: 10px;
+    }
+
+    &--subtitles {
+      padding: 0;
+      text-align: center;
+    }
+
+    &--fullscreen {
+      text-align: left;
+      padding-left: 12px;
+    }
+
+    svg {
+      fill: #ffffff;
     }
   }
 
@@ -75,12 +127,46 @@
   }
 }
 
+@media (min-width: @tablet-width) and (min-resolution: 144dpi),
+  (min-width: @tablet-width) and (min-resolution: 1.5dppx) {
+  .player__video {
+    background-image: url("../../img/video-tablet@2x.jpg");
+  }
+}
+
 @media (min-width: @desktop-width) {
+  .player__video {
+    background-image: url("../../img/video-desktop@1x.jpg");
+  }
+
   .player__control {
     width: 8.25%;
+
+    &--restart {
+      padding-left: 16px;
+    }
+
+    &--subtitles {
+      text-align: left;
+      padding-top: 3px;
+      padding-left: 9px;
+    }
+
+    &--fullscreen {
+      text-align: left;
+      padding-top: 2px;
+      padding-left: 5px;
+    }
   }
 
   .player__progressbar {
     width: 75.25%;
+  }
+}
+
+@media (min-width: @desktop-width) and (min-resolution: 144dpi),
+  (min-width: @desktop-width) and (min-resolution: 1.5dppx) {
+  .player__video {
+    background-image: url("../../img/video-desktop@2x.jpg");
   }
 }

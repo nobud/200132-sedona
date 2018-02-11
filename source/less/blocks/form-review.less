@@ -1,15 +1,15 @@
 .form-review {
   box-sizing: border-box;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 36px;
+  padding-bottom: 37px;
   width: 100%;
 }
 
 .form-review__button {
-  padding-top: 15px;
+  display: block;
+  margin: 0 auto;
+  padding-top: 16px;
   padding-bottom: 15px;
-  width: 100%;
+  width: 87.5%;
 }
 
 @media (max-width: @mobile-width-only) {
@@ -22,7 +22,7 @@
   .form-review {
     .container-fluid();
     padding: 0;
-    padding-bottom: 60px;
+    padding-bottom: 61px;
 
     form {
       display: flex;
@@ -33,13 +33,13 @@
 
   .form-review__button {
     width: 50%;
+    padding-bottom: 16px;
     margin-bottom: 0;
-    padding-top: 16px;
-    padding-bottom: 15px;
   }
 
   .form-review__comment {
     box-sizing: border-box;
+    padding-top: 3px;
     padding-left: 20px;
     padding-right: 0;
     width: 50%;
@@ -50,7 +50,9 @@
 
 @media (min-width: @desktop-width) {
   .form-review {
+    padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 66px;
-    width: 80%;
+    width: 100%;
   }
 }

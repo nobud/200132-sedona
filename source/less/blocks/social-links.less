@@ -1,17 +1,28 @@
 .social-links {
-  margin-bottom: 42px;
+  margin-bottom: 41px;
   text-align: center;
   font-size: 0;
 }
 
 .social-links__btn {
   position: relative;
+  padding: 15px;
   width: 47px;
   height: 47px;
   margin: 0 3px;
   font-size: @base-font-size;
   line-height: @base-line-size;
   font-weight: 400;
+
+  svg {
+    fill: #ffffff;
+  }
+
+  &:active {
+    svg {
+      fill: rgba(255, 255, 255, 0.3);
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {

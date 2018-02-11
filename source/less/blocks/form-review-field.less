@@ -14,13 +14,14 @@
       position: relative;
       box-sizing: border-box;
       width: 100%;
+      height: 58px;
       flex-grow: 1;
 
       &::after {
         position: absolute;
         width: 58px;
         height: 100%;
-        bottom: 0;
+        top: 0;
         right: 0;
         content: "";
         z-index: 20;
@@ -43,7 +44,7 @@
 
     .form-review-field__input {
       padding-right: 65px;
-      outline: none;
+      height: 100%;
     }
 
     .form-review-field__label {
@@ -53,21 +54,9 @@
     }
   }
 
-  &--check {
-    margin-bottom: 22px;
-  }
-
-  &--radio {
-    margin-bottom: 11px;
-  }
-
-  &--check .form-review-field__input,
-  &--radio .form-review-field__input {
-    display: none;
-  }
-
   &--check .form-review-field__label,
   &--radio .form-review-field__label {
+    position: relative;
     padding: 16px 0;
     padding-left: 80px;
     font-size: 18px;
@@ -75,6 +64,100 @@
     font-weight: 700;
     text-transform: none;
     color: @review-font-color;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 4px;
+      background-color: #f2f2f2;
+    }
+  }
+
+  &--check .form-review-field__input,
+  &--radio .form-review-field__input {
+    display: none;
+  }
+
+  &--check {
+    margin-bottom: 22px;
+
+    .form-review-field__label {
+      &::before {
+        width: 55px;
+        height: 55px;
+        border-radius: 10%;
+        outline: none;
+      }
+
+      .tick {
+        position: absolute;
+        top: 24px;
+        left: 18px;
+        display: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .form-review-field__input[type="checkbox"] ~ .form-review-field__label:hover {
+    &::before {
+      background-color: #e5e5e5;
+      cursor: pointer;
+    }
+  }
+
+  .form-review-field__input[type="checkbox"] ~ .form-review-field__label:active {
+    &::before {
+      background-color: #d5d5d5;
+    }
+  }
+
+  .form-review-field__input[type="checkbox"]:checked ~ .form-review-field__label:active {
+    .tick {
+      fill: #a4a4a4;
+    }
+  }
+
+  .form-review-field__input[type="checkbox"]:checked ~ .form-review-field__label {
+    .tick {
+      display: block;
+    }
+  }
+
+  &--radio {
+    margin-bottom: 11px;
+
+    .form-review-field__label {
+      &::before {
+        width: 22px;
+        height: 22px;
+        border: 17px solid #f2f2f2;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .form-review-field__input[type="radio"] ~ .form-review-field__label:hover {
+    &::before {
+      background-color: #e5e5e5;
+      border-color: #e5e5e5;
+      cursor: pointer;
+    }
+  }
+
+  .form-review-field__input[type="radio"] ~ .form-review-field__label:active,
+    .form-review-field__input[type="radio"]:checked ~ .form-review-field__label:active {
+    &::before {
+      border-color: #d5d5d5;
+      background-color: #a4a4a4;
+    }
+  }
+
+  .form-review-field__input[type="radio"]:checked ~ .form-review-field__label {
+    &::before {
+      background-color: #333333;
+    }
   }
 
   &--err-show {
@@ -98,7 +181,9 @@
   box-sizing: border-box;
   min-width: 50%;
   width: 100%;
+  height: 58px;
   flex-grow: 1;
+  outline: none;
 
   .set-input-form();
 
@@ -128,6 +213,7 @@
   box-sizing: border-box;
   padding-top: 6px;
   padding-left: 22px;
+  width: 100%;
   text-transform: none;
   color: @error-color;
 }
@@ -196,27 +282,39 @@
         order: 0;
         padding: 6px 0;
         padding-right: 18px;
+        padding-bottom: 15px;
         width: auto;
-        align-self: center;
+        align-self: flex-end;
       }
 
       &:first-of-type {
         padding-right: 80px;
+      }
 
-        .form-review-field__label {
-          width: 24%;
-        }
+      .form-review-field__label-full-phone {
+        display: none;
       }
 
       .form-review-field__container-input {
         width: auto;
         flex-grow: 1;
+        align-self: flex-end;
       }
     }
 
     &--radio {
       .form-review-field__label {
         padding-left: 80px;
+      }
+    }
+
+    &--radio,
+    &--check {
+      .form-review-field__label {
+        &::before {
+          left: 4px;
+          top: 2px;
+        }
       }
     }
 
@@ -231,7 +329,8 @@
 
   .form-review-field__error {
     padding: 0;
-    padding-top: 4px;
+    padding-left: 8px;
+    padding-top: 2px;
     order: -1;
     width: 100%;
     text-align: center;
