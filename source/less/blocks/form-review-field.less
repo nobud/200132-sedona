@@ -59,6 +59,7 @@
     position: relative;
     padding: 16px 0;
     padding-left: 80px;
+    max-width: 100%;
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
@@ -80,7 +81,7 @@
   }
 
   &--check {
-    margin-bottom: 22px;
+    margin-bottom: 23px;
 
     .form-review-field__label {
       &::before {
@@ -126,7 +127,7 @@
   }
 
   &--radio {
-    margin-bottom: 11px;
+    margin-bottom: 12px;
 
     .form-review-field__label {
       &::before {
@@ -157,12 +158,6 @@
   .form-review-field__input[type="radio"]:checked ~ .form-review-field__label {
     &::before {
       background-color: #333333;
-    }
-  }
-
-  &--err-show {
-    .form-review-field__error {
-      display: block;
     }
   }
 }
@@ -208,18 +203,10 @@
   }
 }
 
-.form-review-field__error {
-  display: none;
-  box-sizing: border-box;
-  padding-top: 6px;
-  padding-left: 22px;
-  width: 100%;
-  text-transform: none;
-  color: @error-color;
-}
-
 @media (min-width: @tablet-width) {
   .form-review-field {
+    align-items: baseline;
+
     &--column {
       flex-direction: row;
       flex-wrap: wrap;
@@ -238,6 +225,7 @@
 
       .form-review-field__label {
         padding-left: 75px;
+        padding-right: 5px;
       }
     }
 
@@ -247,17 +235,11 @@
 
       .form-review-field__label {
         padding-left: 80px;
+        padding-right: 5px;
+        hyphens: auto;
+        word-wrap: break-word;
       }
     }
-  }
-
-  .form-review-field__error {
-    order: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    align-self: center;
-    width: 50%;
-    text-align: right;
   }
 
   .form-review-field__container-input {
@@ -271,7 +253,14 @@
     position: relative;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+
+    &--fixed-label {
+      .form-review-field__label {
+        max-width: 35%;
+        hyphens: auto;
+        word-wrap: break-word;
+      }
+    }
 
     &--column {
       margin-bottom: 16px;
@@ -305,12 +294,7 @@
     &--radio {
       .form-review-field__label {
         padding-left: 80px;
-      }
-    }
 
-    &--radio,
-    &--check {
-      .form-review-field__label {
         &::before {
           left: 4px;
           top: 2px;
@@ -318,21 +302,18 @@
       }
     }
 
-    &--err-show {
-      align-content: space-between;
+    &--check {
+      .form-review-field__label {
+        padding-left: 82px;
+        padding-right: 5px;
+        align-self: flex-start;
+        text-align: left;
 
-      .form-review-field__container-input {
-        margin-top: 10px;
+        &::before {
+          left: 2px;
+          top: 2px;
+        }
       }
     }
-  }
-
-  .form-review-field__error {
-    padding: 0;
-    padding-left: 8px;
-    padding-top: 2px;
-    order: -1;
-    width: 100%;
-    text-align: center;
   }
 }
