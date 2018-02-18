@@ -34,7 +34,8 @@
     text-decoration: none;
     outline: none;
 
-    &[href]:hover {
+    &[href]:hover,
+    &[href]:focus {
       background-color: @menu-color-hover;
       color: #ffffff;
     }
@@ -81,7 +82,8 @@
       padding: 14px 10px;
       padding-bottom: 16px;
 
-      &[href]:hover {
+      &[href]:hover,
+      &[href]:focus {
         background-color: @base-background-color;
         color: @blue-style-color;
       }
