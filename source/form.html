@@ -12,6 +12,11 @@
       <include src="build/img/sprite.svg"></include>
     </div>
     <div class="main-wrapper">
+      <!--при отсутствии js остается установлен класс page-header--nojs (меню в мобильной версии по умолчанию открыто,
+      кнопки, работающие на js, скрыты)
+      класс page-header--nojs при наличии js будет удален
+      классы page-header--menu-closed и page-header--menu-open переключают состояние меню и внешний вид кнопки
+      при наличии js-->
       <header class="page-header  page-header--menu-closed  page-header--nojs">
         <a class="logo" href="index.html">
           <picture>
@@ -84,15 +89,15 @@
             <section class="form-review-block">
               <h2 class="form-review-block__title">Ваше общее впечатление:</h2>
               <div class="form-review-block__item  form-review-field  form-review-field--radio">
-                <input class="form-review-field__input" id="good" type="radio" name="grade-group" checked>
+                <input class="form-review-field__input  visually-hidden" id="good" type="radio" name="grade-group" checked>
                 <label class="form-review-field__label" for="good">Скорее положительное</label>
               </div>
               <div class="form-review-block__item  form-review-field  form-review-field--radio">
-                <input class="form-review-field__input" id="bad" type="radio" name="grade-group">
+                <input class="form-review-field__input  visually-hidden" id="bad" type="radio" name="grade-group">
                 <label class="form-review-field__label" for="bad">Скорее отрицательное</label>
               </div>
               <div class="form-review-block__item  form-review-field  form-review-field--radio">
-                <input class="form-review-field__input" id="unknown" type="radio" name="grade-group">
+                <input class="form-review-field__input  visually-hidden" id="unknown" type="radio" name="grade-group">
                 <label class="form-review-field__label" for="unknown">Затрудняюсь ответить</label>
               </div>
             </section>
@@ -100,7 +105,7 @@
               <h2 class="form-review-block__title">Посещенные достопримечательности:</h2>
               <div class="form-review-block__group-check">
                 <div class="form-review-block__item  form-review-field  form-review-field--check">
-                  <input class="form-review-field__input" id="bridge-of-devil" type="checkbox" name="bridge-of-devil" checked>
+                  <input class="form-review-field__input  visually-hidden" id="bridge-of-devil" type="checkbox" name="bridge-of-devil" checked>
                   <label class="form-review-field__label" for="bridge-of-devil">
                     <svg class="tick" width="23" height="16" aria-hidden="true" role="presentation">
                       <use xlink:href="#spr-icon-tick"></use>
@@ -109,7 +114,7 @@
                   </label>
                 </div>
                 <div class="form-review-block__item  form-review-field  form-review-field--check">
-                  <input class="form-review-field__input" id="slide-park" type="checkbox" name="slide-park" checked>
+                  <input class="form-review-field__input  visually-hidden" id="slide-park" type="checkbox" name="slide-park" checked>
                   <label class="form-review-field__label" for="slide-park">
                     <svg class="tick" width="23" height="16" aria-hidden="true" role="presentation">
                       <use xlink:href="#spr-icon-tick"></use>
@@ -118,7 +123,7 @@
                   </label>
                 </div>
                 <div class="form-review-block__item  form-review-field  form-review-field--check">
-                  <input class="form-review-field__input" id="mountain-bell" type="checkbox" name="mountain-bell" checked>
+                  <input class="form-review-field__input  visually-hidden" id="mountain-bell" type="checkbox" name="mountain-bell" checked>
                   <label class="form-review-field__label" for="mountain-bell">
                     <svg class="tick" width="23" height="16" aria-hidden="true" role="presentation">
                       <use xlink:href="#spr-icon-tick"></use>
@@ -127,7 +132,7 @@
                   </label>
                 </div>
                 <div class="form-review-block__item  form-review-field  form-review-field--check">
-                  <input class="form-review-field__input" id="red-rocks" type="checkbox" name="red-rocks">
+                  <input class="form-review-field__input  visually-hidden" id="red-rocks" type="checkbox" name="red-rocks">
                   <label class="form-review-field__label" for="red-rocks">
                     Красные скалы
                     <svg class="tick" width="23" height="16" aria-hidden="true" role="presentation">

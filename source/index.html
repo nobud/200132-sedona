@@ -12,6 +12,11 @@
       <include src="build/img/sprite.svg"></include>
     </div>
     <div class="main-wrapper">
+      <!--при отсутствии js остается установлен класс page-header--nojs (меню в мобильной версии по умолчанию открыто,
+      кнопки, работающие на js, скрыты)
+      класс page-header--nojs при наличии js будет удален
+      классы page-header--menu-closed и page-header--menu-open переключают состояние меню и внешний вид кнопки
+      при наличии js-->
       <header class="page-header  page-header--menu-closed  page-header--nojs">
         <a class="logo">
           <picture>

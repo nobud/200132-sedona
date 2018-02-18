@@ -1,12 +1,12 @@
 var ESC_CODE = 27;
 
+// header
 var pageHeader = document.querySelector('.page-header');
 if (pageHeader) {
-  var navToggle = pageHeader.querySelector('.page-header__menu-toggle');
-
+  // класс page-header--nojs при наличии js должен быть удален
   pageHeader.classList.remove('page-header--nojs');
-
   pageHeader.addEventListener('click', function() {
+    // page-header--menu-closed и page-header--menu-open переключают состояние меню и внешний вид кнопки
     if (pageHeader.classList.contains('page-header--menu-closed')) {
       pageHeader.classList.remove('page-header--menu-closed');
       pageHeader.classList.add('page-header--menu-opened');
@@ -17,6 +17,7 @@ if (pageHeader) {
   });
 }
 
+// форма отзыва
 var wrapReview = document.querySelector('.form-review');
 if (wrapReview) {
   var formReview = wrapReview.firstElementChild;
@@ -32,10 +33,7 @@ if (wrapReview) {
   var btnCloseMessageErr = messageErr.querySelector(
     '.message-info__btn-close');
 
-
-
   var validityReview = function() {
-    var flagValidity = true;
     firstName.value = firstName.value.trim();
     if (!firstName.value) {
       return false;
@@ -114,7 +112,6 @@ if (wrapReview) {
 
   var onCloseMessage = function(evt) {
     deleteListenersMessage();
-
     closeMessage();
   }
 

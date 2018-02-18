@@ -75,11 +75,6 @@
     }
   }
 
-  &--check .form-review-field__input,
-  &--radio .form-review-field__input {
-    display: none;
-  }
-
   &--check {
     margin-bottom: 23px;
 
@@ -101,7 +96,8 @@
     }
   }
 
-  .form-review-field__input[type="checkbox"] ~ .form-review-field__label:hover {
+  .form-review-field__input[type="checkbox"] ~ .form-review-field__label:hover,
+    .form-review-field__input[type="checkbox"]:focus ~ .form-review-field__label {
     &::before {
       background-color: #e5e5e5;
       cursor: pointer;
@@ -139,7 +135,8 @@
     }
   }
 
-  .form-review-field__input[type="radio"] ~ .form-review-field__label:hover {
+  .form-review-field__input[type="radio"] ~ .form-review-field__label:hover,
+    .form-review-field__input[type="radio"]:focus ~ .form-review-field__label {
     &::before {
       background-color: #e5e5e5;
       border-color: #e5e5e5;
