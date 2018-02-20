@@ -5,7 +5,9 @@
     <title>Седона</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="js/picturefill.min.js"></script>
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <div style="display:none">
@@ -15,7 +17,7 @@
       <!--при отсутствии js остается установлен класс page-header--nojs (меню в мобильной версии по умолчанию открыто,
       кнопки, работающие на js, скрыты)
       класс page-header--nojs при наличии js будет удален
-      классы page-header--menu-closed и page-header--menu-open переключают состояние меню и внешний вид кнопки
+      классы page-header--menu-closed и page-header--menu-opened переключают состояние меню и внешний вид кнопки
       при наличии js-->
       <header class="page-header  page-header--menu-closed  page-header--nojs">
         <a class="logo">
@@ -33,7 +35,7 @@
             <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML academy</a></li>
           </ul>
         </nav>
-        <button class="page-header__menu-toggle" type="button">Открыть меню</button>
+        <button class="page-header__menu-toggle" type="button">Открыть/закрыть меню</button>
       </header>
       <main class="page-main">
         <section class="main-picture  main-picture--large">
